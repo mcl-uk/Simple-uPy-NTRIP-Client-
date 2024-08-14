@@ -2,9 +2,11 @@
 A very simple micropython ntrip client nominally for use on an ESP32
 
 Inspired by:
+
   https://github.com/jcmb/NTRIP/blob/master/NTRIP%20Client/NtripClient.py
 
 Description:
+
   Receives the RTCM binary data stream from the specified NTRIP caster and routes it to
   UART#1 at the specified baud-rate. Simply set the operating parameters to suit your
   application and save to your target device as main.py.
@@ -14,6 +16,7 @@ Description:
   up Wifi is widely available.
 
 Notes:
+
   This code has been tested on an Adafruit Airlift ESP32 WROOM-32E module but should
   work on any other ESP32 (or non-ESP32) microPython platform. Debug data is available
   on the module's 'TxD' pin (UART#0 tx @115200Bd) and the received RTCM serial data is
