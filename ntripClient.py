@@ -1,19 +1,33 @@
+# Very basic NTRIP client for microPython platforms - nominally ESP32
+#
+# SJM@MCL Aug 24
+#
+# Inspired by:
+#   https://github.com/jcmb/NTRIP/blob/master/NTRIP%20Client/NtripClient.py
+#   This is free and open code, redistribute it and/or modify it at will.
+#   It is distributed in the hope that it will be useful but without any kind of
+#   warranty, implied or otherwise.
+#
+# Description:
+#   Receives the RTCM binary data stream from the specified NTRIP caster and routes it to
+#   UART#1 at the specified baud-rate. Simply set the operating parameters to suit your
+#   application and save to your target device as main.py.
 
 import socket, sys, time, os
 import machine
-from machine import Pin, UART
+from machine import UART
 from ubinascii import b2a_base64 as b64encode
 
 # ------------------------ Operating paramteres --------------------
 
-ntripCaster   = "rtk2go.com"
-userNamePwd   = "your@email.addr:none" # no pwd rqd for rtk2go clients
-mountPoint    = "mount-point-name-here"
-userAgent     = "Dumb uPyNTRIP Client/0.1"
-myLat, myLon  = 53, -1 # your aprx lat/lon
-myAlt         = 252    # your altitude in metres
+ntripCaster   = "rtk2go.com"            # your preferred ntrip server address here
+userNamePwd   = "your@email.addr:none"  # <your email address>:<password> here
+mountPoint    = "JoeSeelsGPS"           # your preferred mount point name here
+myLat, myLon  = 53, -1                  # your aprx lat/lon here
+myAlt         = 252                     # your altitude in metres here
 serialBaud    = 115200
 txPin, rxPin  = 33, 9  # default pins for uart1 are 10,9 but see notes above
+userAgent     = "Dumb uPyNTRIP Client/0.1"
 
 ntripPort     = 2101
 ntripHost     = False  # not tested
