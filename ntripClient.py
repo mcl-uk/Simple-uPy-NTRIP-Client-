@@ -7,11 +7,11 @@ from ubinascii import b2a_base64 as b64encode
 # ------------------------ Operating paramteres --------------------
 
 ntripCaster   = "rtk2go.com"
-userNamePwd   = "rtk2go@fishbeetle.co.uk:none" # no pwd rqd for rtk2go clients
-mountPoint    = "JoeSeelsGPS"
+userNamePwd   = "your@email.addr:none" # no pwd rqd for rtk2go clients
+mountPoint    = "mount-point-name-here"
 userAgent     = "Dumb uPyNTRIP Client/0.1"
-myLat, myLon  = 53, -1
-myAlt         = 252
+myLat, myLon  = 53, -1 # your aprx lat/lon
+myAlt         = 252    # your altitude in metres
 serialBaud    = 115200
 txPin, rxPin  = 33, 9  # default pins for uart1 are 10,9 but see notes above
 
@@ -134,8 +134,6 @@ def txfrDataTask():
 
 # ------------------------- main init -----------------------------
 
-# &&& establish/check WiFi internet connection
-
 err = 0
 try:
     casterAddress = socket.getaddrinfo(ntripCaster, ntripPort)[0][-1]
@@ -153,8 +151,6 @@ try:
     print('---')
 
     while err == 0: # ------------------- main loop --------------------
-
-        # &&& modulate LED to confirm main loop
 
         time.sleep(0.01) # at 115KB ~11ms is rqd to txfr 128 bytes (uart has 256B buffer)
         tNow = int(time.time())
