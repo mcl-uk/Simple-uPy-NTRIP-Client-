@@ -29,11 +29,15 @@ Notes:
   an adapter with RTS and DTR outputs is required (which rules out FTDI units).
   However, to be able to use the same adapter with tools like Thonny or Ampy it must
   also incorporate Nodemcu-32s's DTR/RTS mod, see the USBToTTL schematics here:
+  
   https://docs.ai-thinker.com/_media/esp32/docs/nodemcu-32s_product_specification.pdf
+  
   Note in particular VT1,VT2,C1 & the two 12K resistors, it's a bit wierd and rather
   nasty but it works!
   Such modified adapters are hard to find (I built my own) but here's an example:
+  
   https://kjdelectronics.com/products/capuf-esp32-programmer
+  
   Note the helpful diagram showing the 6-wire interface to the ESP32 module.
 
   Once flashed with the micropython binary you can continue to use the adapter with
