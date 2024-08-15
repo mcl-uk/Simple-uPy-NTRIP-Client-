@@ -34,7 +34,7 @@ application and save to your target device as main.py.
    manually sequence the RST and IO0 pins. But for smarter, hassle-free flashing with
    ESPTool an adapter with RTS & DTR outputs (RTS connects to ESP32_RST/EN & DTR to
    ESP32_IO0) may be worth the investment.  _BUT_ to be able to use the _same_ adapter
-   for susequent software dev work with tools like Thonny or Ampy it should also
+   for subsequent software dev work with tools like Thonny or Ampy it should also
    incorporate Nodemcu-32s's DTR/RTS mod, see the USBToTTL schematics here:
 
    https://docs.ai-thinker.com/_media/esp32/docs/nodemcu-32s_product_specification.pdf
