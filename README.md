@@ -70,7 +70,7 @@ application and save to your target device as main.py.
 
  Change log:
  
-   14-08-24 v0.1 Posted to github
+   14-08-24 v0.1 Initial working version
    
    15-08-24 v0.2 Added watchdog for RTCM data stream & added optional confidence LED 
 
