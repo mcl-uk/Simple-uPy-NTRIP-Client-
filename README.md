@@ -68,7 +68,7 @@ application and save to your target device as main.py.
    Observed power consumption averages at around 40mA with no more than 300mA peaks,
    measured at 5V on a WROOM-32E based Adafruit Airlift module.
 
- Change log
+ Change log:
  
    14-08-24 v0.1 Posted to github
    
