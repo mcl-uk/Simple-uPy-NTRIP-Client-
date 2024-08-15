@@ -73,7 +73,7 @@
 
 # ------------------------------ libs -------------------------------
 
-import socket, sys, time, os
+import socket, sys, time
 import machine
 from machine import UART
 from ubinascii import b2a_base64 as b64encode
