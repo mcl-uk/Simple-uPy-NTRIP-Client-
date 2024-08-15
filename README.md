@@ -6,6 +6,7 @@ Inspired by:
   https://github.com/jcmb/NTRIP/blob/master/NTRIP%20Client/NtripClient.py
 
 Description:
+
 Receives the RTCM binary data stream from the specified NTRIP caster and routes it to
 UART#1 at the specified baud-rate. Simply set the operating parameters to suit your
 application and save to your target device as main.py.
